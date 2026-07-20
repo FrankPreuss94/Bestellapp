@@ -1,0 +1,119 @@
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 125px;
+    width: 100%;
+    background-color: rgba(231, 108, 31, 1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-inline: 64px;
+
+    .logo_header {
+        height: 45px;
+    }
+
+    .menu_icon {
+        height: 40px;
+    }
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .hero_bg {
+        width: 100%;
+        max-width: 1440px;
+    }
+
+    .hero_infos {
+        height: 270px;
+        width: 100%;
+        max-width: 1440px;
+        background-color: rgb(209, 204, 204);
+
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        img {
+            height: 200px;
+            position: absolute;
+            top: -125px;
+        }
+
+        h1 {
+            .h1_span {
+                color: rgba(231, 108, 31, 1);
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.dishes_section {
+    width: 100%;
+    max-width: 1440px;
+
+    /* display: flex; */
+
+    .section_head {
+        height: 55px;
+        background-color: rgba(231, 108, 31, 1);
+        padding-left: 280px;
+
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        img {
+            height: 80px;
+
+            position: absolute;
+            top: -24px;
+            left: 180px;
+        }
+    }
+
+    .dish_display {
+        padding: 24px 0 48px 0;
+    }
+}
+
+footer {
+    height: 125px;
+    width: 100%;
+    padding-top: 70px;
+
+    background-color: rgba(231, 108, 31, 1);
+
+    .footer_lable {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 48px;
+
+        .copyright {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+    }
+}
