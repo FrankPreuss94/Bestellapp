@@ -18,3 +18,7 @@ function renderSalads() {
         saladsRef.innerHTML += saladsTemplate(saladsIndex);
     }
 }
+
+function renderOrderBasket(){
+    
+}
