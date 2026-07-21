@@ -4,7 +4,7 @@ function burgersTemplate(burgerIndex) {
             <img src="./assets/img/${burgers[burgerIndex].img_link}" alt="${burgers[burgerIndex].img_alt}">
             <div class="dish_card_infos">
                 <div class="name_discription">
-                    <h4>${burgers[burgerIndex].name}</h4>
+                    <h3>${burgers[burgerIndex].name}</h4>
                     <p>${burgers[burgerIndex].discription}</p>
                 </div>
                 <div class="price_add">
@@ -22,7 +22,7 @@ function pizzasTemplate(pizzasIndex) {
             <img src="./assets/img/${pizzas[pizzasIndex].img_link}" alt="${pizzas[pizzasIndex].name}">
             <div class="dish_card_infos">
                 <div class="name_discription">
-                    <h4>${pizzas[pizzasIndex].name}</h4>
+                    <h3>${pizzas[pizzasIndex].name}</h4>
                     <p>${pizzas[pizzasIndex].discription}</p>
                 </div>
                 <div class="price_add">
@@ -39,7 +39,7 @@ function saladsTemplate(saladsIndex) {
             <img src="./assets/img/${salads[saladsIndex].img_link}" alt="${salads[saladsIndex].name}">
             <div class="dish_card_infos">
                 <div class="name_discription">
-                    <h4>${salads[saladsIndex].name}</h4>
+                    <h3>${salads[saladsIndex].name}</h4>
                     <p>${salads[saladsIndex].discription}</p>
                 </div>
                 <div class="price_add">

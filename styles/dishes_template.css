@@ -1,8 +1,8 @@
 .dish_card {
-    height: 140px;
+    height: 150px;
     width: 715px;
     display: flex;
-    gap: 56px;
+    gap: 40px;
     padding: 10px;
     margin-bottom: 16px;
     background-color: rgba(253, 234, 220, 1);
@@ -17,12 +17,21 @@
         display: flex;
         justify-content: space-between;
 
+        h3,
         h4 {
             font-size: 24px;
-            margin-bottom: 8px;
         }
 
-        .name_discription {}
+        p {
+            font-family: Palanquin;
+            font-weight: 500;
+        }
+
+        .name_discription {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
 
         .price_add {
             display: flex;
@@ -33,10 +42,13 @@
             button {
                 height: 30px;
                 width: 115px;
-                
+
                 background-color: white;
                 border: none;
                 border-radius: 20px;
+
+                font-family: Palanquin;
+                font-weight: 600;
             }
         }
     }
