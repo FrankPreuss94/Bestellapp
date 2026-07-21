@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./styles/standard.css">
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
+    <link rel="stylesheet" href="./styles/dishes_template.css">
     <link rel="stylesheet" href="./styles/fonts.css">
 
     <script src="./scripts/db.js"></script>
@@ -17,7 +18,7 @@
     <script src="./script.js"></script>
 </head>
 
-<body>
+<body onload="renderBurgers(), renderPizzas(), renderSalads()">
     <header>
         <img class="logo_header" src="./assets/icons/Logo_Bestellapp.png" alt="Bestell App Logo">
         <img class="menu_icon" src="./assets/icons/menu.png" alt="Menu">
@@ -44,7 +45,7 @@
                 <img src="./assets/icons/Pizza_icon.png" alt="Pizza Icon">
                 <h2>Pizza (30cm)</h2>
             </div>
-            <div class="dish_display" id="burger_dishes"></div>
+            <div class="dish_display" id="pizzas_dishes"></div>
         </section>
 
         <section class="dishes_section">
@@ -52,7 +53,7 @@
                 <img src="./assets/icons/Salad_icon.png" alt="Salad Icon">
                 <h2>Salad</h2>
             </div>
-            <div class="dish_display" id="burger_dishes"></div>
+            <div class="dish_display" id="salads_dishes"></div>
         </section>
 
     </main>

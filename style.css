@@ -90,10 +90,14 @@ main {
             top: -24px;
             left: 180px;
         }
+
+        h2 {
+            font-size: 40px;
+        }
     }
 
     .dish_display {
-        padding: 24px 0 48px 0;
+        padding: 24px 120px 48px 120px;
     }
 }
 

@@ -1,0 +1,43 @@
+.dish_card {
+    height: 140px;
+    width: 715px;
+    display: flex;
+    gap: 56px;
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: rgba(253, 234, 220, 1);
+    border-radius: 12px;
+
+    img {
+        width: 200px;
+    }
+
+    .dish_card_infos {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .name_discription {}
+
+        .price_add {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+
+            button {
+                height: 30px;
+                width: 115px;
+                
+                background-color: white;
+                border: none;
+                border-radius: 20px;
+            }
+        }
+    }
+}
