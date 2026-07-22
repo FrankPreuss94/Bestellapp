@@ -1,7 +1,7 @@
 function renderBurgers() {
     const burgersRef = document.getElementById("burger_dishes")
-    for (let burgerIndex = 0; burgerIndex < burgers.length; burgerIndex++) {
-        burgersRef.innerHTML += burgersTemplate(burgerIndex);
+    for (let burgersIndex = 0; burgersIndex < burgers.length; burgersIndex++) {
+        burgersRef.innerHTML += burgersTemplate(burgersIndex);
     }
 }
 
@@ -19,6 +19,14 @@ function renderSalads() {
     }
 }
 
-function renderOrderBasket(){
-    
+
+
+function addToBasket(dish) {
+    const alreadyOrdered = basket.findIndex(element => element.name == dish.name);
+    if (alreadyOrdered < 0) {
+        dish.amount = 1;
+        basket.push(dish);
+    } else {
+        basket[alreadyOrdered].amount += 1;
+    }
 }
