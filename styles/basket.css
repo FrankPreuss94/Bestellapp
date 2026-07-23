@@ -21,7 +21,6 @@
     .basket_order {
         height: 600px;
         width: 100%;
-        background-color: green;
 
         display: flex;
         flex-direction: column;
@@ -30,9 +29,12 @@
 }
 
 .orders {
-    height: 380px;
+    height: 455px;
     width: 100%;
-    background-color: blue;
+
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(231, 195, 173, 1) rgba(54, 53, 52, 1);
 
     /* display: flex;
     flex-direction: column;

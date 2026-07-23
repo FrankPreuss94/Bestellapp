@@ -67,9 +67,9 @@ function basketTemplate(basketIndex) {
                 <button><img src="./assets/icons/delete.png" alt=""></button>
             </div>    
             <div class="amount_and_price">
-                <div class="amount" id="amount${basketIndex}">
+                <div class="amount">
                     <button>-</button>
-                    <p>${basket[basketIndex].amount}</p>
+                    <p id="amount_counter${basketIndex}"></p>
                     <button>+</button>
                 </div>
                 <div class="price">
