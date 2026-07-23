@@ -64,13 +64,13 @@ function basketTemplate(basketIndex) {
         <div class="ordered_dish" id="ordered_dish${basketIndex}">
             <div class="name_and_trash">
                 <h4>${basket[basketIndex].name}</h4>
-                <button><img src="./assets/icons/delete.png" alt=""></button>
+                <button onclick="deleteDish(${basketIndex})"><img src="./assets/icons/delete.png" alt=""></button>
             </div>    
             <div class="amount_and_price">
                 <div class="amount">
-                    <button>-</button>
+                    <button onclick="reduceAmount(${basketIndex})">-</button>
                     <p id="amount_counter${basketIndex}"></p>
-                    <button>+</button>
+                    <button onclick="increaseAmount(${basketIndex})">+</button>
                 </div>
                 <div class="price">
                     <h4 id="price${basketIndex}">12,90€</h4>

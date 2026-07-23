@@ -22,6 +22,7 @@ function renderSalads() {
 function renderBasket() {
     const basketRef = document.getElementById("orders")
     if (basket == "") {
+        basketRef.innerHTML = "";
         basketRef.innerHTML += emptyBasketTemplate();
     } else {
         basketRef.innerHTML = "";
@@ -55,4 +56,21 @@ function addToBasket(dish) {
         renderAmount(alreadyOrdered);
         renderDishPrice(alreadyOrdered)
     }
+}
+
+function increaseAmount(basketIndex) {
+    basket[basketIndex].amount += 1;
+    renderAmount(basketIndex);
+    renderDishPrice(basketIndex);
+}
+
+function reduceAmount(basketIndex) {
+    basket[basketIndex].amount -= 1;
+    renderAmount(basketIndex);
+    renderDishPrice(basketIndex);
+}
+
+function deleteDish(basketIndex) {
+    basket.splice([basketIndex], 1)
+    renderBasket();
 }
