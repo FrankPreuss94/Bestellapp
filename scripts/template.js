@@ -9,7 +9,7 @@ function burgersTemplate(burgersIndex) {
                 </div>
                 <div class="price_add">
                     <h4>${burgers[burgersIndex].price.toFixed(2).replace(".", ",")} €</h4>
-                    <button onclick="addToBasket(burgers[${burgersIndex}])" id="add_burger_to_basket${burgersIndex}">Add to basket</button>
+                    <button onclick="addToBasket(burgers[${burgersIndex}])">Add to basket</button>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ function pizzasTemplate(pizzasIndex) {
                 </div>
                 <div class="price_add">
                     <h4>${pizzas[pizzasIndex].price.toFixed(2).replace(".", ",")} €</h4>
-                    <button id="add_to_basket${pizzasIndex}">Add to basket</button>
+                    <button onclick="addToBasket(pizzas[${pizzasIndex}])">Add to basket</button>
                 </div>
             </div>
     `
@@ -44,8 +44,38 @@ function saladsTemplate(saladsIndex) {
                 </div>
                 <div class="price_add">
                     <h4>${salads[saladsIndex].price.toFixed(2).replace(".", ",")} €</h4>
-                    <button>Add to basket</button>
+                    <button onclick="addToBasket(salads[${saladsIndex}])">Add to basket</button>
                 </div>
             </div>
+    `
+}
+
+function emptyBasketTemplate() {
+    return /*html*/`
+        <div class="empty_basket">
+            <p>Nothing here yet.<br>Go ahead an choose something delicious!</p>
+            <img src="./assets/icons/shopping_cart.png" alt="shopping cart">
+        </div>
+    `
+}
+
+function basketTemplate(basketIndex) {
+    return /*html*/`
+        <div class="ordered_dish" id="ordered_dish${basketIndex}">
+            <div class="name_and_trash">
+                <h4>${basket[basketIndex].name}</h4>
+                <button><img src="./assets/icons/delete.png" alt=""></button>
+            </div>    
+            <div class="amount_and_price">
+                <div class="amount" id="amount${basketIndex}">
+                    <button>-</button>
+                    <p>${basket[basketIndex].amount}</p>
+                    <button>+</button>
+                </div>
+                <div class="price">
+                    <h4 id="price${basketIndex}">12,90€</h4>
+                </div>
+            </div>
+        </div>
     `
 }

@@ -19,7 +19,17 @@ function renderSalads() {
     }
 }
 
-
+function renderBasket() {
+    const basketRef = document.getElementById("orders")
+    if (basket == "") {
+        basketRef.innerHTML += emptyBasketTemplate();
+    } else {
+        basketRef.innerHTML = "";
+        for (let basketIndex = 0; basketIndex < basket.length; basketIndex++) {
+            basketRef.innerHTML += basketTemplate(basketIndex);
+        }
+    }
+}
 
 function addToBasket(dish) {
     const alreadyOrdered = basket.findIndex(element => element.name == dish.name);
@@ -29,4 +39,5 @@ function addToBasket(dish) {
     } else {
         basket[alreadyOrdered].amount += 1;
     }
+    renderBasket();
 }
