@@ -62,7 +62,6 @@ function renderPriceCalculation() {
     priceCalculationRef.innerHTML = calculationTemplate(subtotalPrice.toFixed(2).replace(".", ",") + "€", totalPrice.toFixed(2).replace(".", ",") + "€");
     console.log(subtotalPrice);
     console.log(totalPrice);
-
 }
 
 function addToBasket(dish) {
@@ -100,4 +99,10 @@ function reduceAmount(basketIndex) {
 function deleteDish(basketIndex) {
     basket.splice([basketIndex], 1)
     renderBasket();
+}
+
+function deliveryDialog() {
+    const dialogRef = document.getElementById("delivery_dialog");
+    dialogRef.showModal();
+    dialogRef.innerHTML = dialogTemplate();
 }

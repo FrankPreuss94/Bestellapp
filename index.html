@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/assets.css">
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/dishes_template.css">
+    <link rel="stylesheet" href="./styles/dialog.css">
     <link rel="stylesheet" href="./styles/fonts.css">
 
     <script src="./scripts/db.js"></script>
@@ -37,7 +38,7 @@
             <div class="basket_order" id="basket_order">
                 <div class="orders" id="orders"></div>
                 <div class="calculation" id="calculation"></div>
-                <Button class="buy_now" id="buy_now">Buy now</Button>
+                <Button onclick="deliveryDialog()" class="buy_now" id="buy_now">Buy now</Button>
             </div>
         </section>
 
@@ -64,6 +65,7 @@
             </div>
             <div class="dish_display" id="salads_dishes"></div>
         </section>
+        <dialog id="delivery_dialog"></dialog>
     </main>
     <footer>
         <div class="footer_lable">
