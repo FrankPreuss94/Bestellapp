@@ -64,17 +64,18 @@
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-h1{
+h1 {
     font-family: Palanquin Dark;
     font-weight: 700;
 }
 
-h2{
+h2 {
     font-family: Palanquin;
     font-weight: 700;
 }
 
-h3, h4{
+h3,
+h4 {
     font-family: Palanquin;
     font-weight: 600;
 }

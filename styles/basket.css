@@ -114,9 +114,34 @@
 }
 
 .calculation {
-    height: 175px;
+    height: 155px;
     width: 100%;
-    background-color: brown;
+
+    padding: 8px;
+
+    div {
+        display: flex;
+        justify-content: space-between;
+
+
+        margin-bottom: 4px;
+
+        font-family: Palanquin;
+        font-weight: 500;
+        color: white;
+    }
+
+    .line {
+        height: 4px;
+        width: 100%;
+        background-color: white;
+
+    }
+
+    .total_price {
+        font-family: Palanquin;
+        font-weight: 600;
+    }
 }
 
 .buy_now {

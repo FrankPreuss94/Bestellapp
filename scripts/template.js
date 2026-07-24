@@ -68,7 +68,7 @@ function basketTemplate(basketIndex) {
             </div>    
             <div class="amount_and_price">
                 <div class="amount">
-                    <button onclick="reduceAmount(${basketIndex})">-</button>
+                    <button onclick="reduceAmount(${basketIndex})" id="reduce_button${basketIndex}">-</button>
                     <p id="amount_counter${basketIndex}"></p>
                     <button onclick="increaseAmount(${basketIndex})">+</button>
                 </div>
@@ -76,6 +76,24 @@ function basketTemplate(basketIndex) {
                     <h4 id="price${basketIndex}">12,90€</h4>
                 </div>
             </div>
+        </div>
+    `
+}
+
+function calculationTemplate(subtotalPrice, totalPrice) {
+    return /*html*/`
+        <div>
+            <p>Subtotal</p>
+            <p id="subtotal_price">${subtotalPrice}</p>
+        </div>
+        <div>
+            <p>Delivery Fee</p>
+            <p>${deliveryFee.toFixed(2).replace(".", ",") + "€"}</p>
+        </div>
+        <div class="line"></div>
+        <div class="total_price">
+            <p>Total</p>
+            <p id="total_price">${totalPrice}</p>
         </div>
     `
 }

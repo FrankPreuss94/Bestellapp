@@ -102,7 +102,7 @@ const basket = [
     {
         "name": "Vegan green slad with tofu",
         "price": 14.90,
-        "amount": 10,
+        "amount": 9,
         "discription": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",
         "img_link": "vegan_salad_tofu.png"
     }
