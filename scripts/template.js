@@ -98,10 +98,16 @@ function calculationTemplate(subtotalPrice, totalPrice) {
     `
 }
 
+function buyNowTemplate() {
+    return /*html*/`
+        <Button onclick="deliveryDialog()" class="buy_now">Buy now</Button>
+    `
+}
+
 function dialogTemplate() {
     return /*html*/`
     <div class="dialog_wrapper">
-        <div><button><img src="./assets/icons/close.png" alt="close"></button></div>
+        <div><button onclick="closeDialog()"><img src="./assets/icons/close.png" alt="close"></button></div>
         <img src="./assets/icons/delivery.png" alt="delivery van">
         <h2>Order confirmed!</h2>
         <h3>Your food is on the way!</h3>

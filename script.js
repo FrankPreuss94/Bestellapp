@@ -1,4 +1,7 @@
 const deliveryFee = 4.99;
+const dialogRef = document.getElementById("delivery_dialog");
+const priceCalculationRef = document.getElementById("calculation");
+const buyNowRef = document.getElementById("buy_now");
 
 function renderBurgers() {
     const burgersRef = document.getElementById("burger_dishes");
@@ -25,6 +28,8 @@ function renderBasket() {
     const basketRef = document.getElementById("orders");
     if (basket == "") {
         basketRef.innerHTML = "";
+        priceCalculationRef.innerHTML = "";
+        buyNowRef.innerHTML = "";
         basketRef.innerHTML += emptyBasketTemplate();
     } else {
         basketRef.innerHTML = "";
@@ -32,8 +37,9 @@ function renderBasket() {
             basketRef.innerHTML += basketTemplate(basketIndex);
             renderAmount(basketIndex);
             renderDishPrice(basketIndex);
+            renderPriceCalculation();
+            renderBuyNowButton();
         }
-        renderPriceCalculation();
     }
 }
 
@@ -52,8 +58,8 @@ function renderDishPrice(basketIndex) {
     dishPriceRef.innerHTML = calculatedPrice.toFixed(2).replace(".", ",") + "€";
 }
 
+
 function renderPriceCalculation() {
-    const priceCalculationRef = document.getElementById("calculation");
     let subtotalPrice = 0;
     for (let priceIndex = 0; priceIndex < basket.length; priceIndex++) {
         subtotalPrice += calculateDishPrice(priceIndex);
@@ -62,6 +68,10 @@ function renderPriceCalculation() {
     priceCalculationRef.innerHTML = calculationTemplate(subtotalPrice.toFixed(2).replace(".", ",") + "€", totalPrice.toFixed(2).replace(".", ",") + "€");
     console.log(subtotalPrice);
     console.log(totalPrice);
+}
+
+function renderBuyNowButton() {
+    buyNowRef.innerHTML = buyNowTemplate();
 }
 
 function addToBasket(dish) {
@@ -102,7 +112,15 @@ function deleteDish(basketIndex) {
 }
 
 function deliveryDialog() {
-    const dialogRef = document.getElementById("delivery_dialog");
     dialogRef.showModal();
     dialogRef.innerHTML = dialogTemplate();
+    setTimeout(() => {
+        closeDialog();
+    }, 2500);
+    basket.splice(0);
+    renderBasket();
+}
+
+function closeDialog() {
+    dialogRef.close();
 }

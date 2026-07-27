@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="./styles/dialog.css">
     <link rel="stylesheet" href="./styles/fonts.css">
 
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./script.js"></script>
+    <script defer src="./scripts/db.js"></script>
+    <script defer src="./scripts/template.js"></script>
+    <script defer src="./script.js"></script>
 </head>
 
 <body onload="renderBurgers(), renderPizzas(), renderSalads(), renderBasket()">
@@ -33,39 +33,53 @@
         </div>
     </section>
     <main>
+        <div class="dishes_section_wrapper">
+            <div class="section_head">
+                <div class="section_head_wrapper">
+                    <img src="./assets/icons/burger_icon.png" alt="Burger Icon">
+                    <h2>Burger & Sandwiches</h2>
+                </div>
+            </div>
+            <section class="dishes_section">
+                <div class="dish_display_wrapper">
+                    <div class="dish_display" id="burger_dishes"></div>
+                </div>
+            </section>
+
+            <section class="dishes_section">
+                <div class="section_head">
+                    <div class="section_head_wrapper">
+                        <img src="./assets/icons/Pizza_icon.png" alt="Pizza Icon">
+                        <h2>Pizza (30cm)</h2>
+                    </div>
+                </div>
+                <div class="dish_display_wrapper">
+                    <div class="dish_display" id="pizzas_dishes"></div>
+                </div>
+            </section>
+
+            <section class="dishes_section">
+                <div class="section_head">
+                    <div class="section_head_wrapper">
+                        <img src="./assets/icons/Salad_icon.png" alt="Salad Icon">
+                        <h2>Salad</h2>
+                    </div>
+                </div>
+                <div class="dish_display_wrapper">
+                    <div class="dish_display" id="salads_dishes"></div>
+                </div>
+            </section>
+            <dialog id="delivery_dialog"></dialog>
+        </div>
+        <div class="basket_wrapper"></div>
         <section class="basket">
             <h3>Your Basket</h3>
             <div class="basket_order" id="basket_order">
                 <div class="orders" id="orders"></div>
                 <div class="calculation" id="calculation"></div>
-                <Button onclick="deliveryDialog()" class="buy_now" id="buy_now">Buy now</Button>
+                <div class="buy_now" id="buy_now"></div>
             </div>
         </section>
-
-        <section class="dishes_section">
-            <div class="section_head">
-                <img src="./assets/icons/burger_icon.png" alt="Burger Icon">
-                <h2>Burger & Sandwiches</h2>
-            </div>
-            <div class="dish_display" id="burger_dishes"></div>
-        </section>
-
-        <section class="dishes_section">
-            <div class="section_head">
-                <img src="./assets/icons/Pizza_icon.png" alt="Pizza Icon">
-                <h2>Pizza (30cm)</h2>
-            </div>
-            <div class="dish_display" id="pizzas_dishes"></div>
-        </section>
-
-        <section class="dishes_section">
-            <div class="section_head">
-                <img src="./assets/icons/Salad_icon.png" alt="Salad Icon">
-                <h2>Salad</h2>
-            </div>
-            <div class="dish_display" id="salads_dishes"></div>
-        </section>
-        <dialog id="delivery_dialog"></dialog>
     </main>
     <footer>
         <div class="footer_lable">
