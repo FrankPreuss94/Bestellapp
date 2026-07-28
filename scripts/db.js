@@ -83,7 +83,7 @@ const salads = [
         "img_link": "green_salad_seafood.png"
     },
     {
-        "name": "Vegan green slad with tofu",
+        "name": "Vegan green salad with tofu",
         "price": 14.90,
         "amount": 0,
         "discription": "Green salad, Cherry tomatoes, Cucumber, Baby spinach, Edamame, Radishes, Bittercress, Tofu, Peanuts",

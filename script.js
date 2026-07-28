@@ -66,8 +66,6 @@ function renderPriceCalculation() {
     }
     const totalPrice = subtotalPrice + deliveryFee;
     priceCalculationRef.innerHTML = calculationTemplate(subtotalPrice.toFixed(2).replace(".", ",") + "€", totalPrice.toFixed(2).replace(".", ",") + "€");
-    console.log(subtotalPrice);
-    console.log(totalPrice);
 }
 
 function renderBuyNowButton() {
@@ -125,11 +123,13 @@ function closeDialog() {
     dialogRef.close();
 }
 
-function changeBurgerHeadline() {
-    const burgerHeadlineRef = document.getElementById("burger_headline");
-    if (window.innerWidth < 500) {
-        burgerHeadlineRef.innerText = "Burger"
-    }
+function openBasket() {
+    const basketWrapperRef = document.getElementById("basket_wrapper");
+    basketWrapperRef.classList.toggle("basket_wrapper_open");
 }
 
-// changeBurgerHeadline()
+
+function closeBasket() {
+    const basketWrapperRef = document.getElementById("basket_wrapper");
+    basketWrapperRef.classList.remove("basket_wrapper_open");
+}

@@ -8,6 +8,18 @@
     position: sticky;
     top: 24px;
 
+    .basket_close {
+        width: 100%;
+        display: none;
+        justify-content: end;
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
     h3 {
         text-align: center;
         font-size: 32px;
@@ -144,8 +156,9 @@
 
 .buy_now {
     height: 64px;
-    width: 70%;
+    width: 200px;
     display: flex;
+    align-items: center;
     justify-content: center;
 
     button {
@@ -161,8 +174,8 @@
     }
 }
 
-@media screen and (min-width: 310px) and (max-width:767px) {
+/* @media screen and (min-width: 310px) and (max-width:767px) {
     .basket {
         display: none;
     }
-}
+} */

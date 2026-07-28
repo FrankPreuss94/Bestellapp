@@ -21,7 +21,7 @@
 </head>
 
 <body onload="renderBurgers(), renderPizzas(), renderSalads(), renderBasket()">
-    <header>
+    <header id="home">
         <img class="logo_header" src="./assets/icons/Logo_Bestellapp.png" alt="Bestell App Logo">
         <img class="menu_icon" src="./assets/icons/menu.png" alt="Menu">
     </header>
@@ -82,9 +82,12 @@
             </section>
             <dialog id="delivery_dialog"></dialog>
         </div>
-        <div class="basket_wrapper">
 
+        <div class="basket_wrapper" id="basket_wrapper">
             <section class="basket">
+                <div class="basket_close">
+                    <button onclick="closeBasket()"><img src="./assets/icons/close.png" alt="close-button"></button>
+                </div>
                 <h3>Your Basket</h3>
                 <div class="basket_order" id="basket_order">
                     <div class="orders" id="orders"></div>
@@ -105,6 +108,14 @@
             <p>Cookie Preference</p>
         </div>
     </footer>
+
+    <nav>
+        <a href="#home"><img src="./assets/icons/home.png" alt="home-button"></a>
+        <img src="./assets/icons/person.png" alt="person-button">
+        <img src="./assets/icons/takeout_dining.png" alt="takeout-button">
+        <button onclick="openBasket()"><img src="./assets/icons/shopping_cart_mobile_nav.png"
+                alt="shoping-cart-button"></button>
+    </nav>
 </body>
 
 </html>

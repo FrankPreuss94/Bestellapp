@@ -1,5 +1,6 @@
 body {
     min-height: 100dvh;
+    /* width: 100dvw; */
     display: flex;
     flex-direction: column;
 }
@@ -108,7 +109,7 @@ main {
 
 .section_head {
     height: 60px;
-    width: 100dvw;
+    width: 100%;
     background-color: rgba(231, 108, 31, 1);
     padding-left: clamp(24px, calc(-383.647px + 37.059vw), 150px);
     display: flex;
@@ -184,5 +185,28 @@ footer {
             align-items: center;
             gap: 8px;
         }
+    }
+}
+
+nav {
+    height: 84px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(54, 53, 52, 1);
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    a {
+        cursor: pointer;
+    }
+
+    button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
     }
 }
