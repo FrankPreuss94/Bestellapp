@@ -1,9 +1,9 @@
 .basket {
     height: 700px;
-    width: 435px;
+    width: clamp(270px, calc(-263.824px + 48.529vw), 435px);
     background-color: rgba(54, 53, 52, 1);
     border-radius: 30px 0 0 30px;
-    padding: 35px 48px 48px 24px;
+    padding: 35px clamp(16px, calc(-20.571px + 4.762vw), 48px) 0px 24px;
 
     position: sticky;
     top: 24px;
@@ -158,5 +158,11 @@
         color: white;
         font-family: Palanquin;
         font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 310px) and (max-width:767px) {
+    .basket {
+        display: none;
     }
 }

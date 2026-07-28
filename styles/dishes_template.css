@@ -1,18 +1,21 @@
 .dish_card {
-    height: 150px;
-    width: 715px;
+    height: clamp(190px, calc(402px - 14.3vw), 260px);
+    width: clamp(470px, calc(122.059px + 41.176vw), 715px);
     display: flex;
-    gap: 40px;
+    gap: clamp(8px, calc(-45.333px + 5.926vw), 40px);
     padding: 10px;
     margin-bottom: 16px;
     background-color: rgba(253, 234, 220, 1);
     border-radius: 12px;
 
     img {
-        width: 200px;
+        width: clamp(150px, calc(91.729px + 7.519vw), 200px);
+        object-fit: cover;
+        border-radius: 12px;
     }
 
     .dish_card_infos {
+        height: 100%;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -41,7 +44,7 @@
 
             button {
                 height: 30px;
-                width: 115px;
+                width: 100px;
 
                 background-color: white;
                 border: none;

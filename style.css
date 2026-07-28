@@ -110,7 +110,7 @@ main {
     height: 60px;
     width: 100dvw;
     background-color: rgba(231, 108, 31, 1);
-    padding-left: 150px;
+    padding-left: clamp(24px, calc(-383.647px + 37.059vw), 150px);
     display: flex;
     align-items: end;
     justify-content: center;
@@ -130,8 +130,13 @@ main {
             font-size: 40px;
             color: white;
             padding-top: 8px;
+
         }
     }
+}
+
+.mobile-text {
+    display: none;
 }
 
 .dishes_section {
@@ -144,11 +149,8 @@ main {
 
         .dish_display {
             width: 100%;
-            /* max-width: 1440px; */
-
-            /* padding: 84px 120px 48px 100px; */
             padding-top: 84px;
-            padding-left:  max(24px, calc((100vw - 1440px) / 2 + 100px));
+            padding-left: max(20px, calc((100vw - 1440px) / 2 + 100px));
         }
     }
 }

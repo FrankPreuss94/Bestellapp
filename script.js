@@ -124,3 +124,12 @@ function deliveryDialog() {
 function closeDialog() {
     dialogRef.close();
 }
+
+function changeBurgerHeadline() {
+    const burgerHeadlineRef = document.getElementById("burger_headline");
+    if (window.innerWidth < 500) {
+        burgerHeadlineRef.innerText = "Burger"
+    }
+}
+
+// changeBurgerHeadline()

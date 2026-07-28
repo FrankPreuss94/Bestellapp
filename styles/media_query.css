@@ -1,0 +1,97 @@
+@media screen and (min-width: 310px) and (max-width:767px) {
+    main {
+        justify-content: center;
+    }
+
+    .basket_wrapper {
+        display: none;
+        gap: 0;
+        padding-top: 110px;
+    }
+
+    .name_and_stars {
+        flex-direction: column-reverse;
+
+    }
+
+    .dish_display {
+        padding-right: 20px;
+        padding-bottom: 48px;
+    }
+
+    .dish_card {
+        flex-direction: column;
+
+
+        img {
+            height: 80px;
+            width: 100%;
+        }
+
+        .dish_card_infos {
+            flex-direction: column;
+
+            .price_add {
+                flex-direction: row;
+            }
+        }
+    }
+
+    .section_head {
+        left: 0px;
+
+        .section_head_wrapper {
+            justify-content: center;
+
+            h2 {
+                font-size: 32px;
+            }
+
+            img {
+                height: 60px;
+                position: absolute;
+                top: -42px;
+            }
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 310px) and (max-width:535px) {
+    .menu_icon {
+        display: none;
+    }
+
+    .desktop-text {
+        display: none;
+    }
+
+    .mobile-text {
+        display: inline;
+    }
+
+    .hero {
+        .hero_infos {
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .dish_card {
+        height: clamp(260px, calc(446.63px - 34.88vw), 335px);
+        width: clamp(300px, calc(46.977px + 79.07vw), 470px);
+    }
+
+    footer {
+        .footer_lable {
+            height: 100%;
+            flex-direction: column-reverse;
+            justify-content: unset;
+            gap: 0;
+            padding-bottom: 16px;
+        }
+    }
+}
