@@ -94,7 +94,6 @@ header {
                     color: rgba(114, 109, 109, 1);
                 }
             }
-
         }
     }
 }
@@ -145,8 +144,11 @@ main {
 
         .dish_display {
             width: 100%;
-            max-width: 1440px;
-            padding: 84px 120px 48px 100px;
+            /* max-width: 1440px; */
+
+            /* padding: 84px 120px 48px 100px; */
+            padding-top: 84px;
+            padding-left:  max(24px, calc((100vw - 1440px) / 2 + 100px));
         }
     }
 }
@@ -155,6 +157,7 @@ main {
     flex-grow: 1;
     display: flex;
     justify-content: end;
+    padding-right: max(0px, calc((100vw - 1440px) / 2));
 }
 
 footer {
