@@ -27,8 +27,15 @@
     <section class="hero">
         <img class="hero_bg" src="./assets/img/hero.png" alt="Delicious pizzas and burger meals.">
         <div class="hero_infos">
-            <img src="./assets/icons/logo_burger.png" alt="Burgerhouse Logo">
-            <h1><span class="h1_span">Burger</span>House</h1>
+            <img class="burgerhouse_logo" src="./assets/icons/logo_burger.png" alt="Burgerhouse Logo">
+            <div class="name_and_stars">
+                <h1><span class="h1_span">Burger</span>House</h1>
+                <div class="stars">
+                    <img src="./assets/icons/star.png" alt="star-icon">
+                    <h4>4,1</h4>
+                    <p>(317)</p>
+                </div>
+            </div>
             <p>The best of Burgers, Pizza and Greens, all in one great place.</p>
         </div>
     </section>
@@ -71,14 +78,16 @@
             </section>
             <dialog id="delivery_dialog"></dialog>
         </div>
-        <div class="basket_wrapper"></div>
-        <section class="basket">
-            <h3>Your Basket</h3>
-            <div class="basket_order" id="basket_order">
-                <div class="orders" id="orders"></div>
-                <div class="calculation" id="calculation"></div>
-                <div class="buy_now" id="buy_now"></div>
-            </div>
+        <div class="basket_wrapper">
+
+            <section class="basket">
+                <h3>Your Basket</h3>
+                <div class="basket_order" id="basket_order">
+                    <div class="orders" id="orders"></div>
+                    <div class="calculation" id="calculation"></div>
+                    <div class="buy_now" id="buy_now"></div>
+                </div>
+        </div>
         </section>
     </main>
     <footer>

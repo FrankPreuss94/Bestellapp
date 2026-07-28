@@ -38,6 +38,7 @@ header {
         height: 270px;
         width: 100%;
         max-width: 1440px;
+        margin-bottom: 84px;
 
         position: relative;
         display: flex;
@@ -46,7 +47,7 @@ header {
         justify-content: center;
         gap: 1rem;
 
-        img {
+        .burgerhouse_logo {
             height: 200px;
             position: absolute;
             top: -125px;
@@ -64,6 +65,37 @@ header {
             font-family: Palanquin;
             font-weight: 700;
         }
+
+        .name_and_stars {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+            .stars {
+                height: 32px;
+                width: 100px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(250, 202, 172, 1);
+                border-radius: 4px;
+                gap: 6px;
+
+                img {
+                    height: 24px;
+                }
+
+                h4 {
+                    font-weight: 700;
+                }
+
+                p {
+                    font-weight: 100;
+                    color: rgba(114, 109, 109, 1);
+                }
+            }
+
+        }
     }
 }
 
@@ -77,13 +109,13 @@ main {
 
 .section_head {
     height: 60px;
-    /* width: 100dvh; */
+    width: 100dvw;
     background-color: rgba(231, 108, 31, 1);
     padding-left: 150px;
     display: flex;
     align-items: end;
     justify-content: center;
-    z-index: ;
+    position: absolute;
 
     .section_head_wrapper {
         width: 100%;
@@ -114,13 +146,15 @@ main {
         .dish_display {
             width: 100%;
             max-width: 1440px;
-            padding: 24px 120px 48px 100px;
+            padding: 84px 120px 48px 100px;
         }
     }
 }
 
 .basket_wrapper {
     flex-grow: 1;
+    display: flex;
+    justify-content: end;
 }
 
 footer {
