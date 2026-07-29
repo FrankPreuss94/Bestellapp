@@ -1,3 +1,10 @@
+.basket_wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    padding-right: max(0px, calc((100vw - 1440px) / 2));
+}
+
 .basket {
     height: 700px;
     width: clamp(270px, calc(-263.824px + 48.529vw), 435px);

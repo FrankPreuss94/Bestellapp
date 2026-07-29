@@ -113,8 +113,13 @@
         <a href="#home"><img src="./assets/icons/home.png" alt="home-button"></a>
         <img src="./assets/icons/person.png" alt="person-button">
         <img src="./assets/icons/takeout_dining.png" alt="takeout-button">
-        <button onclick="openBasket()"><img src="./assets/icons/shopping_cart_mobile_nav.png"
-                alt="shoping-cart-button"></button>
+        <div class="nav_shopping_cart">
+            <button onclick="openBasket()"><img src="./assets/icons/shopping_cart_mobile_nav.png"
+                    alt="shoping-cart-button"></button>
+            <div id="amount_shopping_cart" class="amount_shopping_cart_hidden">
+                <p class="counter_shopping_cart" id="counter_shopping_cart"></p>
+            </div>
+        </div>
     </nav>
 </body>
 

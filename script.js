@@ -78,11 +78,29 @@ function addToBasket(dish) {
         dish.amount = 1;
         basket.push(dish);
         renderBasket();
+        updateDishButton(dish);
     } else {
         basket[alreadyOrdered].amount += 1;
         renderAmount(alreadyOrdered);
         renderDishPrice(alreadyOrdered);
         renderPriceCalculation();
+        updateDishButton(dish);
+    }
+}
+
+function updateDishButton(dish) {
+    const buttonRef = document.getElementById(dish.name);
+    const basketIndex = basket.findIndex(element => element.name == dish.name);
+    if (basketIndex < 0) {
+        buttonRef.innerText = "Add to basket";
+        buttonRef.classList.remove("added_dish_button");
+        buttonRef.classList.add("add_to_basket_button");
+        shoppingCartCounter();
+    } else {
+        buttonRef.innerText = `Added ${basket[basketIndex].amount}`;
+        buttonRef.classList.remove("add_to_basket");
+        buttonRef.classList.add("added_dish_button");
+        shoppingCartCounter();
     }
 }
 
@@ -91,6 +109,7 @@ function increaseAmount(basketIndex) {
     renderAmount(basketIndex);
     renderDishPrice(basketIndex);
     renderPriceCalculation();
+    updateDishButton(basket[basketIndex]);
 }
 
 function reduceAmount(basketIndex) {
@@ -101,12 +120,15 @@ function reduceAmount(basketIndex) {
         renderAmount(basketIndex);
         renderDishPrice(basketIndex);
         renderPriceCalculation();
+        updateDishButton(basket[basketIndex]);
     }
 }
 
 function deleteDish(basketIndex) {
-    basket.splice([basketIndex], 1)
+    const dish = basket[basketIndex];
+    basket.splice(basketIndex, 1)
     renderBasket();
+    updateDishButton(dish)
 }
 
 function deliveryDialog() {
@@ -128,8 +150,25 @@ function openBasket() {
     basketWrapperRef.classList.toggle("basket_wrapper_open");
 }
 
-
 function closeBasket() {
     const basketWrapperRef = document.getElementById("basket_wrapper");
     basketWrapperRef.classList.remove("basket_wrapper_open");
 }
+
+function shoppingCartCounter() {
+    const counterRef = document.getElementById("counter_shopping_cart");
+    const amountShoppingCartRef = document.getElementById("amount_shopping_cart");
+    let counter = 0;
+    for (let counterIndex = 0; counterIndex < basket.length; counterIndex++) {
+        counter += basket[counterIndex].amount;
+    }
+    counterRef.innerText = counter;
+    if (counter > 0) {
+        amountShoppingCartRef.classList.add("amount_shopping_cart")
+        amountShoppingCartRef.classList.remove("amount_shopping_cart_hidden")
+    } else {
+        amountShoppingCartRef.classList.add("amount_shopping_cart_hidden")
+        amountShoppingCartRef.classList.remove("amount_shopping_cart")
+    }
+}
+
