@@ -151,7 +151,7 @@ main {
         .dish_display {
             width: 100%;
             padding-top: 84px;
-            padding-left: max(20px, calc((100vw - 1440px) / 2 + 100px));
+            padding-left: max(8px, calc((100vw - 1440px) / 2 + 100px));
         }
     }
 }
@@ -167,6 +167,11 @@ footer {
     font-family: Palanquin;
     font-weight: 400;
     color: white;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 
     .footer_lable {
         display: flex;
@@ -236,4 +241,8 @@ nav {
 
 .counter_shopping_cart {
     color: rgba(231, 108, 31, 1);
+}
+
+.body_not_scrollable {
+    overflow-y: hidden;
 }

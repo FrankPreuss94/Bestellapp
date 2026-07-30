@@ -147,12 +147,16 @@ function closeDialog() {
 
 function openBasket() {
     const basketWrapperRef = document.getElementById("basket_wrapper");
+    const bodyRef = document.getElementById("body")
     basketWrapperRef.classList.toggle("basket_wrapper_open");
+    bodyRef.classList.add("body_not_scrollable")
 }
 
 function closeBasket() {
     const basketWrapperRef = document.getElementById("basket_wrapper");
+    const bodyRef = document.getElementById("body")
     basketWrapperRef.classList.remove("basket_wrapper_open");
+    bodyRef.classList.remove("body_not_scrollable")
 }
 
 function shoppingCartCounter() {

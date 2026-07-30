@@ -1,0 +1,19 @@
+header {
+    height: 125px;
+    width: 100%;
+    background-color: rgba(231, 108, 31, 1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-inline: 64px;
+
+    .logo_header {
+        height: 45px;
+    }
+}
+
+section {
+    padding: 64px;
+}

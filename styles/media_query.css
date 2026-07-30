@@ -40,7 +40,7 @@
     }
 
     .dish_display {
-        padding-right: 20px;
+        padding-right: 8px;
         padding-bottom: 48px;
     }
 
@@ -105,7 +105,7 @@
 
     .dish_card {
         height: clamp(260px, calc(446.63px - 34.88vw), 335px);
-        width: clamp(300px, calc(46.977px + 79.07vw), 470px);
+        width: clamp(290px, calc(46.977px + 73.07vw), 470px);
     }
 
     footer {
@@ -123,7 +123,7 @@
     .basket_wrapper {
 
         .basket {
-            height: 91dvh;
+            height: 88dvh;
             padding-top: 24px;
             border-radius: 0;
 
@@ -134,7 +134,7 @@
     }
 
     .orders {
-        height: 315px;
+        height: 295px;
 
         .ordered_dish {
             height: 90px;
