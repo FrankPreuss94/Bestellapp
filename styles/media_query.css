@@ -35,13 +35,27 @@
         display: block;
     }
 
-    .name_and_stars {
-        flex-direction: column-reverse;
+    .hero {
+        .hero_infos {
+            .name_and_stars {
+                flex-direction: column-reverse;
+                gap: 0;
+                padding-top: 80px;
+            }
+        }
     }
 
-    .dish_display {
-        padding-right: 8px;
-        padding-bottom: 48px;
+    h1 {
+        line-height: 1;
+    }
+
+    .dishes_section {
+        & .dish_display_wrapper {
+            .dish_display {
+                padding-right: 8px;
+                padding-bottom: 48px;
+            }
+        }
     }
 
     .dish_card {
@@ -81,7 +95,6 @@
 }
 
 @media screen and (min-width: 310px) and (max-width:535px) {
-
     .menu_icon {
         display: none;
     }
@@ -96,6 +109,12 @@
 
     .hero {
         .hero_infos {
+            padding-inline: 20px;
+
+            h1 {
+                font-size: 42px;
+            }
+
             p {
                 text-align: center;
             }
@@ -103,8 +122,8 @@
     }
 
     .dish_card {
-        height: clamp(260px, calc(446.63px - 34.88vw), 335px);
-        width: clamp(290px, calc(46.977px + 73.07vw), 470px);
+        height: clamp(260px, calc(446.63px - 20vw), 375px);
+        width: clamp(275px, calc(46.977px + 73.07vw), 470px);
     }
 
     footer {

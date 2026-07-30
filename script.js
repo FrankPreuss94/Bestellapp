@@ -179,7 +179,7 @@ function openBasket() {
     const basketWrapperRef = document.getElementById("basket_wrapper");
     const bodyRef = document.getElementById("body")
     basketWrapperRef.classList.toggle("basket_wrapper_open");
-    bodyRef.classList.add("body_not_scrollable")
+    bodyRef.classList.toggle("body_not_scrollable")
 }
 
 function closeBasket() {

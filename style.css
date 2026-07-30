@@ -9,9 +9,16 @@ header {
     width: 100%;
     background-color: rgba(231, 108, 31, 1);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     padding-inline: 64px;
+
+    .header_wrapper {
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
     .logo_header {
         height: 45px;
@@ -146,6 +153,7 @@ main {
             width: 100%;
             padding-top: 84px;
             padding-left: max(8px, calc((100vw - 1440px) / 2 + 100px));
+            padding-bottom: 24px;
         }
     }
 }
