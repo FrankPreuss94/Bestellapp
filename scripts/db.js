@@ -92,5 +92,4 @@ const salads = [
 ]
 
 const basket = [
-
 ]

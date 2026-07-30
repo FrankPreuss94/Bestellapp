@@ -58,7 +58,6 @@ function renderDishPrice(basketIndex) {
     dishPriceRef.innerHTML = calculatedPrice.toFixed(2).replace(".", ",") + "€";
 }
 
-
 function renderPriceCalculation() {
     let subtotalPrice = 0;
     for (let priceIndex = 0; priceIndex < basket.length; priceIndex++) {

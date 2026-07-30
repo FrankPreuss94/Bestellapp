@@ -1,11 +1,9 @@
 dialog {
     height: 270px;
     width: 415px;
-
     background-color: rgba(54, 53, 52, 1);
     border: none;
     border-radius: 40px;
-
     padding: 24px;
     margin: auto;
 

@@ -53,7 +53,7 @@ function saladsTemplate(saladsIndex) {
 function emptyBasketTemplate() {
     return /*html*/`
         <div class="empty_basket">
-            <p>Nothing here yet.<br>Go ahead an choose something delicious!</p>
+            <p>Nothing here yet.<br>Go ahead and choose something delicious!</p>
             <img src="./assets/icons/shopping_cart.png" alt="shopping cart">
         </div>
     `
