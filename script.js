@@ -27,9 +27,7 @@ function renderSalads() {
 function renderBasket() {
     const basketRef = document.getElementById("orders");
     if (basket == "") {
-        basketRef.innerHTML = "";
-        priceCalculationRef.innerHTML = "";
-        buyNowRef.innerHTML = "";
+        emptyContent(basketRef)
         basketRef.innerHTML += emptyBasketTemplate();
     } else {
         basketRef.innerHTML = "";
@@ -37,10 +35,20 @@ function renderBasket() {
             basketRef.innerHTML += basketTemplate(basketIndex);
             renderAmount(basketIndex);
             renderDishPrice(basketIndex);
-            renderPriceCalculation();
-            renderBuyNowButton();
+            renderBasketFunctionCall()
         }
     }
+}
+
+function renderBasketFunctionCall() {
+    renderPriceCalculation();
+    renderBuyNowButton();
+}
+
+function emptyContent(basketRef) {
+    basketRef.innerHTML = "";
+    priceCalculationRef.innerHTML = "";
+    buyNowRef.innerHTML = "";
 }
 
 function renderAmount(basketIndex) {
@@ -55,7 +63,7 @@ function calculateDishPrice(basketIndex) {
 function renderDishPrice(basketIndex) {
     const dishPriceRef = document.getElementById(`price${basketIndex}`);
     const calculatedPrice = calculateDishPrice(basketIndex);
-    dishPriceRef.innerHTML = calculatedPrice.toFixed(2).replace(".", ",") + "€";
+    dishPriceRef.innerText = calculatedPrice.toFixed(2).replace(".", ",") + "€";
 }
 
 function renderPriceCalculation() {
@@ -65,6 +73,18 @@ function renderPriceCalculation() {
     }
     const totalPrice = subtotalPrice + deliveryFee;
     priceCalculationRef.innerHTML = calculationTemplate(subtotalPrice.toFixed(2).replace(".", ",") + "€", totalPrice.toFixed(2).replace(".", ",") + "€");
+}
+
+function changeTotalPrice() {
+    const subtotalPriceRef = document.getElementById("subtotal_price")
+    const totalPriceRef = document.getElementById("total_price")
+    let subtotalPrice = 0;
+    for (let priceIndex = 0; priceIndex < basket.length; priceIndex++) {
+        subtotalPrice += calculateDishPrice(priceIndex);
+    }
+    const totalPrice = subtotalPrice + deliveryFee;
+    subtotalPriceRef.innerText = subtotalPrice.toFixed(2).replace(".", ",") + "€";
+    totalPriceRef.innerText = totalPrice.toFixed(2).replace(".", ",") + "€";
 }
 
 function renderBuyNowButton() {
@@ -82,7 +102,7 @@ function addToBasket(dish) {
         basket[alreadyOrdered].amount += 1;
         renderAmount(alreadyOrdered);
         renderDishPrice(alreadyOrdered);
-        renderPriceCalculation();
+        changeTotalPrice()
         updateDishButton(dish);
     }
 }
@@ -103,11 +123,20 @@ function updateDishButton(dish) {
     }
 }
 
+function dishButtonReset() {
+    for (let buttonIndex = 0; buttonIndex < basket.length; buttonIndex++) {
+        const buttonRef = document.getElementById(`${basket[buttonIndex].name}`);
+        buttonRef.innerText = "Add to basket";
+        buttonRef.classList.remove("added_dish_button");
+        buttonRef.classList.add("add_to_basket_button");
+    }
+}
+
 function increaseAmount(basketIndex) {
     basket[basketIndex].amount += 1;
     renderAmount(basketIndex);
     renderDishPrice(basketIndex);
-    renderPriceCalculation();
+    changeTotalPrice()
     updateDishButton(basket[basketIndex]);
 }
 
@@ -118,7 +147,7 @@ function reduceAmount(basketIndex) {
     } else {
         renderAmount(basketIndex);
         renderDishPrice(basketIndex);
-        renderPriceCalculation();
+        changeTotalPrice()
         updateDishButton(basket[basketIndex]);
     }
 }
@@ -136,8 +165,10 @@ function deliveryDialog() {
     setTimeout(() => {
         closeDialog();
     }, 2500);
+    dishButtonReset();
     basket.splice(0);
     renderBasket();
+    shoppingCartCounter();
 }
 
 function closeDialog() {

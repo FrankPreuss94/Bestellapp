@@ -118,7 +118,7 @@
     }
 }
 
-@media screen and (max-height:808px) {
+@media screen and (max-height:808px) and (max-width:767px) {
     .basket_wrapper {
 
         .basket {

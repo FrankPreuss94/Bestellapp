@@ -9,7 +9,7 @@ function burgersTemplate(burgersIndex) {
                 </div>
                 <div class="price_add">
                     <h4>${burgers[burgersIndex].price.toFixed(2).replace(".", ",")} €</h4>
-                    <button id="${burgers[burgersIndex].name}" onclick="addToBasket(burgers[${burgersIndex}])">Add to basket</button>
+                    <button id="${burgers[burgersIndex].name}" class="dish_button" onclick="addToBasket(burgers[${burgersIndex}])">Add to basket</button>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ function pizzasTemplate(pizzasIndex) {
                 </div>
                 <div class="price_add">
                     <h4>${pizzas[pizzasIndex].price.toFixed(2).replace(".", ",")} €</h4>
-                    <button id="${pizzas[pizzasIndex].name}" onclick="addToBasket(pizzas[${pizzasIndex}])">Add to basket</button>
+                    <button id="${pizzas[pizzasIndex].name}" class="dish_button" onclick="addToBasket(pizzas[${pizzasIndex}])">Add to basket</button>
                 </div>
             </div>
     `
@@ -44,7 +44,7 @@ function saladsTemplate(saladsIndex) {
                 </div>
                 <div class="price_add">
                     <h4>${salads[saladsIndex].price.toFixed(2).replace(".", ",")} €</h4>
-                    <button id="${salads[saladsIndex].name}" onclick="addToBasket(salads[${saladsIndex}])">Add to basket</button>
+                    <button id="${salads[saladsIndex].name}" class="dish_button" onclick="addToBasket(salads[${saladsIndex}])">Add to basket</button>
                 </div>
             </div>
     `
@@ -73,7 +73,7 @@ function basketTemplate(basketIndex) {
                     <button onclick="increaseAmount(${basketIndex})">+</button>
                 </div>
                 <div class="price">
-                    <h4 id="price${basketIndex}">12,90€</h4>
+                    <h4 id="price${basketIndex}"></h4>
                 </div>
             </div>
         </div>
